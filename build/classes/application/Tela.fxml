@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="817.0" style="-fx-background-color: #042940;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TelaFXMLController">
+    <children>
+        <Label layoutX="46.0" layoutY="166.0" text="ID:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="46.0" layoutY="227.0" text="Nome:" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtId" layoutX="46.0" layoutY="193.0" prefHeight="26.0" prefWidth="270.0" />
+        <TextField fx:id="txtNome" layoutX="46.0" layoutY="255.0" prefHeight="26.0" prefWidth="269.0" />
+        <Button fx:id="btnInsert" layoutX="45.0" layoutY="338.0" mnemonicParsing="false" onAction="#actionSQLInsert" prefHeight="26.0" prefWidth="270.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Black Italic" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnDelete" layoutX="45.0" layoutY="379.0" mnemonicParsing="false" onAction="#actionSQLDelete" prefHeight="26.0" prefWidth="270.0" style="-fx-background-color: red;" text="Apagar" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Black Italic" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnUpdate" layoutX="45.0" layoutY="419.0" mnemonicParsing="false" onAction="#actionSQLUpdate" prefHeight="26.0" prefWidth="270.0" text="Atualizar">
+            <font>
+                <Font name="Segoe UI Black Italic" size="15.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tabelaAlunos" layoutX="346.0" layoutY="167.0" onMouseClicked="#onMouseClick" prefHeight="284.0" prefWidth="447.0">
+            <columns>
+                <TableColumn fx:id="colunaId" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nomeCol" prefWidth="395.0" text="Nome" />
+            </columns>
+        </TableView>
+        <Label fx:id="id" layoutX="162.0" layoutY="17.0" text="" />
+        <Label fx:id="nome" layoutX="162.0" layoutY="56.0" text="" />
+        <Label layoutX="187.0" layoutY="44.0" text="CADASTRO DE ALUNO" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Black Italic" size="40.0" />
+            </font>
+        </Label>
+       
+      
+    </children>
+</AnchorPane>
